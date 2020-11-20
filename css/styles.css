@@ -1,1 +1,56 @@
 /* Global Styles */
+html,
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+h1 {
+  font-family: "Mate";
+  src: url("./../fonts/Mate-Regular.ttf") format("truetype");
+  font-size: 40px;
+  color: #5a8409;
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+h2 {
+  font-family: "Mate";
+  src: url("./../fonts/Mate-Italic.ttf") format("truetype");
+  font-size: 39px;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Source Sans Pro";
+  src: url("./../fonts/PlayfairDisplaySC-Italic.otf") format("truetype");
+  font-size: 35px;
+  text-align: center;
+}
+
+p {
+  font-family: "Source Sans Pro";
+  src: url("./../fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-size: 26px;
+  text-align: center;
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 25px;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  padding: 20px;
+}

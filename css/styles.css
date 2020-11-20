@@ -436,3 +436,17 @@ footer a {
 }
 
 /* code copied and pasted */
+
+#container {
+  height: 2000px;
+}
+
+#container DIV {
+  margin: 50px;
+  padding: 50px;
+  background-color: white;
+}
+
+.hideme {
+  opacity: 0;
+}

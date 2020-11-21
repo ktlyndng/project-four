@@ -4,7 +4,7 @@ var triggers = document.querySelectorAll(".trigger");
 
 // Open modal when trigger is clicked
 function openModal(e) {
-  var index = Array.from(triggers).indexOf(e.target);
+  var index = Array.from(triggers).indexOf(e.currentTarget);
   var modal = Array.from(modals)[index];
   modal.classList.add("active");
 }

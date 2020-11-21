@@ -512,3 +512,40 @@ a {
   align-items: center;
   margin-top: 5;
 }
+
+@media (max-width: 767px) {
+  .photo-background-2 {
+    background-image: url(./../images/nature-yerba-cropped.jpg);
+    width: auto;
+    height: auto;
+    display: flex;
+  }
+  .photo-background {
+    background-image: url(./../images/home-image-cropped.jpg);
+    width: auto;
+    height: auto;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content > p {
+    font-size: 15px;
+  }
+
+  .modal-content {
+    width: 500px;
+  }
+
+  .modal-content > img {
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.grid-1-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,25 +1,53 @@
-// Get the modal
-var modal = document.getElementById("myModal");
+// Get reference
+var modals = document.querySelectorAll(".modal");
+var triggers = document.querySelectorAll(".trigger");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+// Open modal when trigger is clicked
+function openModal(e) {
+  var index = Array.from(triggers).indexOf(e.target);
+  var modal = Array.from(modals)[index];
+  modal.classList.add("active");
+}
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// Close modal when black overlay is clicked
+function closeModal(e) {
+  e.target.classList.remove("active");
+}
 
-// When the user clicks the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
+// Wiring up
+triggers.forEach((trigger) => {
+  // You can iterate over a list of elements like this
+  trigger.addEventListener("click", openModal);
+});
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", closeModal);
+});
+
+//* Fade in while Scrolling *//
+
+// Configure the intersection observer
+let options = {
+  threshold: 0.5,
 };
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
+// Define function that runs whenever the user scrolls
+let callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    // Each entry describes an intersection change for one observed
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
 };
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+// Make the intersection observer
+let observer = new IntersectionObserver(callback, options);
+
+// Grab the entries we want to observe
+let targets = document.querySelectorAll("body > *");
+
+// Tell the intersection observer to observe these entries
+targets.forEach((target) => {
+  observer.observe(target);
+});

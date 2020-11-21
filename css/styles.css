@@ -5,13 +5,15 @@ body {
   margin: 0;
   padding: 0;
   width: auto;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1 {
   font-family: "Playfair Display";
   src: url("./../fonts/PlayfairDisplay-BlackItalic.otf") format("truetype");
   font-size: 40px;
-  color: #5a8409;
+  color: white;
   text-align: center;
   max-width: 50%;
   margin: 0 auto;
@@ -38,26 +40,13 @@ h4 {
   src: url("./../fonts/PlayfairDisplaySC-Italic.otf") format("truetype");
   font-size: 30px;
   text-align: center;
-  color: black;
-}
-
-main > article > header > section > p {
-  font-family: "Source Sans Pro";
-  src: url("./../fonts/SourceSansPro-Regular.ttf") format("truetype");
-  font-size: 20px;
-  text-align: center;
-  width: 100%;
-  max-width: 50%;
-  margin: 0 auto;
-  margin-top: 15px;
-  padding: 25px;
-  color: black;
+  color: #5a8409;
 }
 
 p {
   font-family: "Source Sans Pro";
   src: url("./../fonts/SourceSansPro-Regular.ttf") format("truetype");
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   width: 100%;
   max-width: 50%;
@@ -75,10 +64,6 @@ img {
   align-content: center;
   align-self: center;
   padding: 20px;
-}
-
-main > article > section > p {
-  font-size: 20px;
 }
 
 /* Grid Styles */
@@ -175,13 +160,12 @@ main > article > section > p {
   margin-bottom: auto;
   align-content: center;
   height: auto;
+  width: auto;
   flex-wrap: wrap;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  width: 500px;
-  height: 400px;
   object-fit: contain;
 }
 
@@ -276,7 +260,7 @@ main > article > section > p {
 /* Navbar Styles */
 
 nav {
-  height: 80px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -401,7 +385,7 @@ footer a {
 /* Accordian */
 
 .accordion {
-  background-color: #98c1d9;
+  background-color: white;
   color: black;
   cursor: pointer;
   padding: 6px;
@@ -415,7 +399,7 @@ footer a {
 
 .active,
 .accordion:hover {
-  background-color: #a0cce6;
+  background-color: white;
 }
 
 .accordion:after {
@@ -432,13 +416,38 @@ footer a {
 
 .panel {
   padding: 0 18px;
-  background-color: #98c1d9;
+  background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 
 /* code copied and pasted */
+
+.trigger {
+  border-radius: 1px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  padding: 0px;
+  max-width: 100%;
+  width: auto;
+  min-height: 100%;
+  margin: 3px;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  background: white;
+}
+
+.trigger > h3 {
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+}
+
+.trigger > p {
+  font-size: 15px;
+}
 
 .modal {
   position: fixed;
@@ -465,41 +474,41 @@ footer a {
   margin: 20px;
   border-radius: 5px;
   padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  display: block;
 }
 
-body {
-  padding-top: 1000px;
-}
-
-.box {
-  width: auto;
-  height: auto;
+body > * {
   opacity: 0;
   transition: 2s all;
 }
-
-.other-box {
-  width: auto;
-  height: auto;
-  opacity: 0;
-  transition: 2s all;
-}
-
-.other-other-box {
-  width: auto;
-  height: auto;
-  opacity: 0;
-  transition: 2s all;
-}
-
-.other-other-other-box {
-  width: auto;
-  height: auto;
-  opacity: 0;
-  transition: 2s all;
-}
-
 body > *.active {
   opacity: 1;
   transition: 2s all;
+}
+
+.photo-background {
+  background-image: url(./../images/home-image.jpg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.photo-background-2 {
+  background-image: url(./../images/nature-yerba.jpg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5;
 }
